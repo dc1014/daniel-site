@@ -13,12 +13,12 @@
 		render: function() {
 			return(
 				<div>
-					<p> Hi der, I am a component </p>
+					<p> I am a React component </p>
 				</div>
 				);
 		}
 	});
 
-	module.exports = home;
+	module.exports = Home;
 	
 }());

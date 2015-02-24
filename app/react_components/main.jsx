@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 (function () {
   'use strict';
 
@@ -7,7 +5,7 @@
     Home = React.createFactory(require('./home.jsx'));
 
   React.render(
-    <Home />,
+    Home(),
     document.getElementById('home')
   );
 
