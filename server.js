@@ -6,6 +6,16 @@ var server = new Hapi.Server();
 
 server.connection({ port: config.port});
 
+
+
+server.route({
+	method: '*',
+	path: '/{p*}',
+	handler: function(request, reply) {
+	return reply("404'ed! Why you go here? It not exist.").code(404);
+}
+});
+
 server.route({
 	method: 'GET',
 	path: '/',
