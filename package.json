@@ -21,6 +21,7 @@
     "good": "^5.1.2",
     "good-console": "^4.1.0",
     "hapi": "^8.2.0",
+    "hapi-require-https": "^2.0.0",
     "morgan": "~1.5.0"
   },
   "engines": {
