@@ -12,11 +12,13 @@
 
 		render: function() {
 			return(
-				<div>
-					<p>I am a React component.</p>
+				<div className="container">
+				<div className="jumbotron">
+				<h1> Daniel Casper </h1>
+				<p> Is a human being. </p>
 				</div>
-				);
-		}
+				</div>
+		)}
 	});
 
 	module.exports = Home;

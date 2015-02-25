@@ -3,7 +3,7 @@ var react = require('gulp-react');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var reactify = require('reactify');
-
+var sass = require('gulp-sass');
 var paths = {
 	css: ['./public/css/**/*.css'],
 	app_js: ['./app/react_components/main.jsx'],
@@ -18,8 +18,14 @@ gulp.task('js', function() {
 	.pipe(gulp.dest('./public/assets/dist/'));
 });
 
+gulp.task('sass', function() {
+    return gulp.src('./public/scss/**.scss')
+        .pipe(sass({ style: 'expanded'}))
+        .pipe(gulp.dest('public/assets/dist/'));
+});
+
 gulp.task('watch', function() {
 	gulp.watch(paths.jsx, ['js'])
 });
 
-gulp.task('default', ['js', 'watch']);
+gulp.task('default', ['js', 'sass', 'watch']);

@@ -28,11 +28,13 @@
 
 		render: function() {
 			return(
-				React.createElement("div", null, 
-					React.createElement("p", null, "I am a React component.")
+				React.createElement("div", {className: "container"}, 
+				React.createElement("div", {className: "jumbotron"}, 
+				React.createElement("h1", null, " Daniel Casper "), 
+				React.createElement("p", null, " Is a human being. ")
 				)
-				);
-		}
+				)
+		)}
 	});
 
 	module.exports = Home;
