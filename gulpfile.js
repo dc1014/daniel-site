@@ -7,7 +7,7 @@ var reactify = require('reactify');
 var paths = {
 	css: ['./public/css/**/*.css'],
 	app_js: ['./app/react_components/main.jsx'],
-	js: ['./app/react_components/'],
+	jsx: ['app/react_components/*.jsx'],
 };
 
 gulp.task('js', function() {
@@ -19,7 +19,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.js, ['js'])
+	gulp.watch(paths.jsx, ['js'])
 });
 
-gulp.task('default', ['watch', 'js']);
+gulp.task('default', ['js', 'watch']);

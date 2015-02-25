@@ -13,7 +13,7 @@
 		render: function() {
 			return(
 				<div>
-					<p> I am a React component </p>
+					<p>I am a React component.</p>
 				</div>
 				);
 		}

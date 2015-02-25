@@ -1,14 +1,21 @@
 var config = require('./config');
 var Hapi = require('hapi');
 var Good = require('good');
-
 var server = new Hapi.Server();
 
 server.connection({ port: config.port});
 
 server.route({
+	method: '*',
+	path: '/{p*}',
+	handler: function(request, reply) {
+		return reply("404'ed! Why you come here?").code(404);
+	}
+}); 
+
+server.route({
   method: 'GET',
-  path: '/{path*}',
+  path: '/{p*}',
   handler: {
     directory: {
       path: './public',
