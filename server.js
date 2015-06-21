@@ -12,7 +12,7 @@ var server = new Hapi.Server();
 
 server.connection({ port: config.port});
 
-/* Directory routing 
+/* Directory routing
 server.route({
   method: 'GET',
   path: '/{p*}',
@@ -38,7 +38,7 @@ handler: function(request, reply) {
           reply.file(__dirname+'/public/'+request.url.path)
       } else {
         reply("404'ed! Why you come here?").code(404);
-      } 
+      }
    }
 });
 
@@ -61,6 +61,14 @@ server.route({
 
 	}
 });
+
+server.route({
+  method: 'GET',
+  path: '/dad',
+  handler: function(request, reply) {
+    reply.file('./public/fathers-day.html')
+  }
+})
 
 server.register({
 	register: Good,
